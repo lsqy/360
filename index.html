@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>360安全导航</title>
+    <link rel="stylesheet" href="css/index.css"/>
+</head>
+<body>
+<div id="fullPage" class="fullpage">
+    <!-- 第一屏 -->
+    <section class="section first">
+        <!-- LOGO -->
+        <div class="logo"></div>
+        <!-- 文字 -->
+        <div class="text">
+            <img src="./images/text_1.png" alt="">
+            <img src="./images/text_2.png" alt="">
+            <img src="./images/text_3.png" alt="">
+            <img src="./images/text_4.png" alt="">
+            <img src="./images/text_5.png" alt="">
+            <img src="./images/text_6.png" alt="">
+            <img src="./images/text_7.png" alt="">
+            <img src="./images/text_8.png" alt="">
+        </div>
+        <!-- 其它信息 -->
+        <div class="info"></div>
+    </section>
+    <!-- 第二屏 -->
+    <section class="section second">
+        <!-- 盾牌 -->
+        <div class="shield">
+            <img src="./images/shield_1.png" alt="">
+            <img src="./images/shield_2.png" alt="">
+            <img src="./images/shield_3.png" alt="">
+            <img src="./images/shield_4.png" alt="">
+            <img src="./images/shield_5.png" alt="">
+            <img src="./images/shield_6.png" alt="">
+            <img src="./images/shield_7.png" alt="">
+            <img src="./images/shield_8.png" alt="">
+            <img src="./images/shield_9.png" alt="">
+        </div>
+        <!-- 其它信息 -->
+        <div class="info"></div>
+    </section>
+    <!-- 第三屏 -->
+    <section class="section third">
+        <!-- 其它信息 -->
+        <div class="info"></div>
+        <!-- 圆 -->
+        <div class="circle">
+            <!-- 火箭 -->
+            <div class="rocket"></div>
+        </div>
+    </section>
+    <!-- 第四屏 -->
+    <section class="section fourth">
+        <!-- 搜索 -->
+        <div class="search">
+            <!-- 关键字 -->
+            <div class="keys"></div>
+            <!-- 盒子 -->
+            <div class="wrap">
+                <div class="result"></div>
+            </div>
+        </div>
+        <!-- 其它信息 -->
+        <div class="info"></div>
+    </section>
+    <!-- 第五屏 -->
+    <section class="section fifth">
+        <!-- 其它信息 -->
+        <div class="info"></div>
+        <!-- 浏览器 -->
+        <div class="broswer">
+            <div class="tool">
+            <!-- 工具栏 -->
+            <div class="toolbar">
+                <p></p>
+            </div>
+            </div>
+            <!-- 边框线 -->
+            <div class="lines lineleft"></div>
+            <div class="lines lineright"></div>
+            <div class="lines linetop"></div>
+            <div class="lines linebottom"></div>
+            <!-- 特别line -->
+            <div class="lineextra"></div>
+            <!-- 其它 -->
+            <div class="extra"></div>
+        </div>
+    </section>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.fullPage.min.js"></script>
+<script>
+    $('#fullPage').fullpage({
+        sectionsColor: ['#0da5d6', '#2AB561', '#DE8910', '#16BA9D', '#0DA5D6'],
+
+        afterLoad: function (anchorLink, index) {
+
+            // 清除所有的current
+            $('.section').removeClass('current');
+
+            // 获得当前这一屏
+            setTimeout(function () {
+                $('.section').eq(index - 1).addClass('current');
+            }, 100);
+
+        }
+    });
+</script>
+</body>
+</html>
